@@ -1,0 +1,52 @@
+[gd_scene load_steps=9 format=3 uid="uid://bh6xjdejw6m6c"]
+
+[ext_resource type="Texture2D" uid="uid://dugeoyghanotq" path="res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Red/Warrior_Red.png" id="1_dq3qu"]
+[ext_resource type="Texture2D" uid="uid://b3fn2lilosouf" path="res://addons/Tiny Swords/Factions/Knights/Troops/Dead/Dead.png" id="2_akwu3"]
+[ext_resource type="Texture2D" uid="uid://c56nn60l2lnik" path="res://addons/Tiny Swords/Resources/Sheep/HappySheep_Bouncing.png" id="3_t6tkw"]
+[ext_resource type="PackedScene" uid="uid://c8jnpolayob4i" path="res://player/player.tscn" id="4_yi852"]
+[ext_resource type="PackedScene" uid="uid://4qp2556khisa" path="res://enemies/pawn.tscn" id="5_6p7ma"]
+[ext_resource type="Texture2D" uid="uid://b0tll6xgqwhpa" path="res://addons/Tiny Swords/Resources/Resources/M_Spawn.png" id="6_bmnyp"]
+[ext_resource type="PackedScene" uid="uid://ces2mj6fsesok" path="res://enemies/goblin.tscn" id="7_vic51"]
+[ext_resource type="PackedScene" uid="uid://3d10ehcg1kkn" path="res://enemies/sheep.tscn" id="8_1hem1"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="WarriorRed" type="Sprite2D" parent="."]
+position = Vector2(2708, 13)
+texture = ExtResource("1_dq3qu")
+
+[node name="Dead" type="Sprite2D" parent="."]
+position = Vector2(1718, -100)
+texture = ExtResource("2_akwu3")
+
+[node name="HappySheepBouncing" type="Sprite2D" parent="."]
+position = Vector2(1750, 166)
+texture = ExtResource("3_t6tkw")
+
+[node name="Player" parent="." instance=ExtResource("4_yi852")]
+position = Vector2(477, 250)
+
+[node name="Pawn" parent="." instance=ExtResource("5_6p7ma")]
+position = Vector2(220, 307)
+
+[node name="Pawn2" parent="." instance=ExtResource("5_6p7ma")]
+position = Vector2(296, 436)
+
+[node name="Pawn3" parent="." instance=ExtResource("5_6p7ma")]
+position = Vector2(201, 55)
+
+[node name="MSpawn" type="Sprite2D" parent="."]
+position = Vector2(657, 850)
+texture = ExtResource("6_bmnyp")
+
+[node name="Goblin" parent="." instance=ExtResource("7_vic51")]
+position = Vector2(978, 344)
+
+[node name="Sheep" parent="." instance=ExtResource("8_1hem1")]
+position = Vector2(673, 460)
+
+[node name="Sheep2" parent="." instance=ExtResource("8_1hem1")]
+position = Vector2(881, 456)
+
+[node name="Sheep3" parent="." instance=ExtResource("8_1hem1")]
+position = Vector2(749, 524)
